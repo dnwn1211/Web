@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div,
+      h2 {
+        border: 1px solid black;
+        /* 다 없어짐 */
+        /* display: none; */
+        /* html 요소는 보이지 않지만 영역은 남아있다 */
+        /* visibility: hidden; */
+      }
+      span,
+      a {
+        border: 1px solid black;
+      }
+      article > div,
+      article > span {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 기본값 세로 block -->
+    <h1>display</h1>
+    <div>content</div>
+    <div>content</div>
+    <div>content</div>
+    <h2>title</h2>
+    <hr />
+    <!-- 가로 -->
+    <h1>display inline</h1>
+    <span>content</span>
+    <span>content</span>
+    <span>content</span>
+    <a href="#">NAVER</a>
+    <hr />
+    <article>
+      <div>content</div>
+      <div>content</div>
+      <div>content</div>
+      <span>content</span>
+      <span>content</span>
+      <span>content</span>
+    </article>
+  </body>
+</html>

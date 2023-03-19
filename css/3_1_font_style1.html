@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap');
+      /* * {
+        margin: 0px;
+        padding: 0px;
+      } */
+      html {
+        /* font-family: serif, monospace; */
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 16px;
+      }
+      .title {
+        font-size: 28;
+        color: hsl(130, 92%, 53%);
+      }
+      .content {
+        font-size: 18;
+      }
+      .font-italic {
+        font-style: italic;
+      }
+      .font-weight-bold {
+        font-weight: bold;
+      }
+      .font-weight-300 {
+        font-weight: 300;
+      }
+      /* 소문자를 작은 대문자로 바꿔줌 */
+      .font-variant {
+        font-variant: small-caps;
+      }
+      .sub {
+        font-size: 20px;
+      }
+      .sub-rem {
+        font-size: 2rem;
+      }
+      .sub-em {
+        font-size: 2em;
+      }
+      .article {
+        font-size: 10px;
+      }
+      .rec-width {
+        width: 20vw;
+        height: 100px;
+        background-color: yellow;
+      }
+      .rec-height {
+        height: 20vh;
+        width: 20px;
+        background-color: rgb(245, 178, 245);
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="title">title</h2>
+    <p class="content">폰트임ㅇㅇ</p>
+    <p class="content font-italic">dd</p>
+    <p class="content font-weight-bold">dd</p>
+    <p class="content font-weight-300">dd</p>
+    <p class="content font-variant">hello</p>
+    <hr />
+    <h2>px</h2>
+    <p class="sub">px</p>
+    <h2>rem</h2>
+    <p class="sub-rem">rem</p>
+    <h2>em</h2>
+    <div class="article">
+      <p class="sub-em">em</p>
+    </div>
+    <hr />
+    <!-- viewport width -->
+    <h2>vw</h2>
+    <div class="rec-width"></div>
+    <!-- viewport height -->
+    <h2>vh</h2>
+    <div class="rec-height"></div>
+  </body>
+</html>
