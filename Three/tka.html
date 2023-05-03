@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="importmap">
+        {
+            "imports":{
+                "three":"https://unpkg.com/three@0.138.3/build/three.module.js",
+                "GLTFLoader":
+                "https://unpkg.com/three@0.141.0/examples/jsm/loaders/GLTFLoader.js"
+            }
+        }
+    </script>
+    <script type="module">
+        import * as THREE from 'three';
+        let scene=new THREE.Scene();
+        scene.background=new THREE.Color("skyblue");
+
+        let camera=new THREE.PerspectiveCamera(
+            45,
+            window.innerWidth/window.innerHeight,0.1,1000
+        )//카메라의 위치 설정
+
+        import{GLTFLoader}from "GLTFLoader";
+        let loader=new GLTFLoader();
+        loader.load("duck/scene.gltf", function(gltf){
+            scene.add(gltf.scene);
+        })
+        // THREE.AmbientLight(color, intensity)
+
+        let light = new THREE.AmbientLight();
+
+        light.color = 0xffff00;
+        light.intensity = 5;
+
+        let light = new THREE.HemisphereLight(0xffff00, 0xff0000, 0.3)
+        
+        let renderer = new THREE.WebGLRenderer({
+        canvas: document.querySelector("#canvas"),
+        antialias: true,
+        });
+
+        renderer.outputEncoding = THREE.sRGBEncoding;
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        loader.load("duck/scene.gltf", function (gltf) {
+        scene.add(gltf.scene);
+        renderer.render(scene, camera); // 랜더링
+        });
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas">
+        
+
+    </canvas>
+</body>
+</html>
